@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+
+  background-image: url(wallpaperflare.com_wallpaper.jpg);
+  font-family: 'Bebas Neue', cursive;
+
+}
+
+.navbar {
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+
+
+}
+
+.Buttons a {
+  color: #ffffff;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+
+li {
+
+  padding: 20px;
+  display: inline-block;
+  position: relative;
+  padding-bottom: 3px;
+  margin-top: 30px;
+}
+
+li:last-child {
+  margin-right: 0;
+}
+
+li:after {
+  content: '';
+  display: block;
+  margin: auto;
+  height: 3px;
+  width: 0px;
+  background: transparent;
+  transition: width .5s;
+}
+
+li:hover:after {
+  width: 100%;
+  background: #af452f;
+}
+
+.PoetryCenter{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+.Poetry {
+  text-align: center;
+  width: 350px;
+  height: 750px;
+  position: relative;
+  margin-right: 10px;
+  margin-left: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.7px);
+  -webkit-backdrop-filter: blur(4.7px);
+  border: 1px solid rgba(255, 255, 255, 0.49);
+  visibility: hidden;
+  font-family: 'Noto Nastaliq Urdu', serif;
+  color: white;
+  z-index: 2;
+}
+
+.Poetry:target {
+  visibility: visible;
+  animation: Enter 1s ease 0s 1 normal forwards;
+}
+
+@keyframes Enter {
+  100% {
+    transform: scale(1);
+    
+  }
+
+  0% {
+    transform: scale(.5);
+   
+  }
+}
+
+.cross {
+  position: absolute;
+  float: right;
+  color: white;
+  right: 9%;
+
+  transform: scale(2.4);
+
+}
+.cross:hover {
+  color: #ff0019;
+}
+
+.Poetry a {
+  text-decoration: none;
+}
+
+.Image1 {
+  width: 100%;
+}
+.Poem01{
+  margin-top: 6%;
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  width:60px; 
+  height: 60px;
+  border-radius: 50%;
+  
+}
+
+/* Position the "next button" to the right */
+.next {
+ right: -10px;
+
+}
+.prev{
+  left: -10px;
+}
+::selection{
+  background-color: #f1ba60;
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  color: #000;
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@media(max-width:350px)
+{
+  .PoetryCenter{
+    transform: scale(.8);
+  }
+}
+@media(max-width:280px)
+{
+  .PoetryCenter{
+    transform: scale(.7);
+  }
+}
+.Poem001{
+  position: relative;
+  top: -20px;
+  transform: scale(.9);
+}
+
+ .subscribe{
+  visibility: hidden;
+ }
+ .subscribe:target{
+  visibility: visible;
+  animation: Enter 1s ease 0s 1 normal forwards;
+ }
+
+
+@media(max-width:600px)
+{
+  body{
+    background-position-x: 200%;
+  }
+  .subscribe{
+    left: 20%;
+
+  }
+ form{
+   transform: scale(.8); 
+   
+  }
+  .cardcontent{
+    transform: scale(.5); 
+   
+  }
+}
+@media(max-width:500px)
+{
+  form{
+    
+    margin-top: 25%;
+   }
+   .cardcontent{
+    position: relative;
+    top: 10em;
+   }
+ 
+}
+
+@media(max-width:400px){
+  form{
+    
+    transform: scale(.8); 
+   }
+   
+}
+
+@media(max-width:350px){
+  body{
+    background-position-x: 200%;
+  }
+  form{
+    
+    margin-top: 57%;
+   }
+   .cardcontent{
+    position: relative;
+    top: 10em;
+   }
+   
+}
+
+.Form
+{
+  display: grid;
+  font-family: 'Bebas Neue', cursive;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+ bottom: 35rem;
+ z-index: 2;
+ height: 20px;
+
+  
+ visibility: hidden;
+}
+
+.Form:target{
+  visibility: visible;
+  animation: Enter 1s ease 0s 1 normal forwards;
+}
+form{
+ 
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 0;
+}
+textarea{
+  padding: 10px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.08);
+  margin-top: 1%;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.7px);
+  -webkit-backdrop-filter: blur(4.7px);
+  border: 1px solid rgba(255, 255, 255, 0.49);
+}
+.Form input{
+  outline: none;
+  background: rgba(255, 255, 255, 0.08);
+ padding: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.7px);
+  -webkit-backdrop-filter: blur(4.7px);
+  border: 1px solid rgba(255, 255, 255, 0.49);
+}
+.submit{
+  margin-top: 1%;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  margin-top: 1%;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.7px);
+  -webkit-backdrop-filter: blur(4.7px);
+  border: 1px solid rgba(255, 255, 255, 0.49);
+}
+.submit:hover{
+  background: rgba(255, 255, 255, 0.402);
+}
+
+.cardcontent{
+  text-align: center;
+  width: 19rem;
+  height: 25em;
+  padding: 10px;
+  background: rgba(230, 174, 174, 0);
+  /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(4.7px);
+  /* border: 1px solid rgba(255, 255, 255, 0.49); */
+z-index: 1;
+}
+.cardcontent h6{
+  position: relative;
+  top: 32%;
+  color: #ffffff;
+  font-size: 20px;
+  text-decoration: none;
+
+
+}
+.cardcontent a{
+  text-decoration: none;
+}
+.card{
+  height: 0;
+  font-family: 'Noto Nastaliq Urdu', serif;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  bottom: 40em;
+ 
+}
+.imgcenter{
+  border-radius: 50%;
+  position: absolute;
+  left:32%;
+  top: 10%;
+  visibility: hidden;
+
+}
+.imgcenter:target{
+  visibility: visible;
+  animation: Enter 1s ease 0s 1 normal forwards;
+}

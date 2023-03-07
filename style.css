@@ -15,6 +15,10 @@ body {
   overflow-x:hidden;
 
 }
+.name{
+  visibility: hidden;}
+.name:target {
+  visibility: visible;}
 
 .navbar {
   width: 100%;

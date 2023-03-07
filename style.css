@@ -26,6 +26,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 50px;
+  font-size:20px;
    position:absolute;
   top: 40%;
 z-index: 1;
@@ -37,7 +38,7 @@ z-index: 1;
 .Buttons a {
   color: #ffffff;
   text-decoration: none;
-  letter-spacing: 2px;
+ 
 }
 
 

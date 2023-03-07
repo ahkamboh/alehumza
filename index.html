@@ -478,6 +478,12 @@
             for (i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";
             }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
 
       
     </script>
@@ -495,12 +501,11 @@ let message=document.getElementById("message").value;
     To : 'itsali190@gmail.com',
     From : 'kambohdiv@gmail.com',
     Subject : "User Inquiry",
-    Body : "Name:"+name+"<br/> UserEmail:&nbsp;" +email+"<br/>Message:"+message
+    Body : "Name:&nbsp;"+name+"<br/>  UserEmail:&nbsp;"+email+"<br/>Message:&nbsp;"+message
 }).then(
   message => alert(message)
 );
         }
-</script>
 </script>
 </body>
 

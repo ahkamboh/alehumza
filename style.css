@@ -90,6 +90,7 @@ li:hover:after {
   border: 1px solid rgba(255, 255, 255, 0.49);
   font-family: 'Noto Nastaliq Urdu', serif;
   color: white;
+   visibility: hidden;
   z-index: 2;
 }
 
@@ -175,13 +176,13 @@ li:hover:after {
 @media(max-width:350px)
 {
   .PoetryCenter{
-    transform: scale(.8);
+    transform: scale(.6);
   }
 }
 @media(max-width:280px)
 {
   .PoetryCenter{
-    transform: scale(.7);
+    transform: scale(.6);
   }
 }
 .Poem001{
